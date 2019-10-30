@@ -1,0 +1,6 @@
+import nltk
+#把中文文章分成句子函数,输入字符串，返回列表
+def chinese_sentencestokenize(text_data):
+    myPattern = r'[。？ ！ ；......]'
+    regex_st2 = nltk.tokenize.RegexpTokenizer(pattern = myPattern,gaps = True)
+    return regex_st2.tokenize(text = text_data)
