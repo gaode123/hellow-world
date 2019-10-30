@@ -4,3 +4,7 @@ def chinese_sentencestokenize(text_data):
     myPattern = r'[。？ ！ ；......]'
     regex_st2 = nltk.tokenize.RegexpTokenizer(pattern = myPattern,gaps = True)
     return regex_st2.tokenize(text = text_data)
+
+#英文
+default_st = nltk.sent_tokenize
+alice_sentences = default_st(text=alice)
